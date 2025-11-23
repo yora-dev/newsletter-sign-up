@@ -81,7 +81,7 @@ body {
 .input-field {
   width: 100%;
   border: 2px solid var(--email-placeholder);
-  color: var(--email-placeholder);
+  color: var(--main-bg);
   outline: none;
   padding: 1.5rem 2rem;
   border-radius: 0.8rem;
@@ -89,7 +89,12 @@ body {
   margin-bottom: 2rem;
 }
 
-.submit-btn {
+.input-field::placeholder {
+  color: var(--email-placeholder);
+}
+
+.submit-btn,
+.dismiss-btn {
   width: 100%;
   padding: 1.5rem 2rem;
   border: none;
@@ -105,6 +110,29 @@ body {
   background-color: hsl(4, 57%, 27%);
 }
 
+.success-container {
+  height: 100vh;
+  background-color: var(--card-bg);
+  padding: 15rem 2rem 0;
+}
+
+.success-header {
+  color: var(--btn-bg);
+  font-size: 3.2rem;
+  margin-top: 2rem;
+}
+
+.success-msg {
+  color: var(--btn-bg);
+  font-size: 1.6rem;
+  margin: 1rem 0 15rem;
+  line-height: 1.5;
+}
+
+.email {
+  font-weight: 700;
+}
+
 @media screen and (min-width: 1024px) {
   body {
     display: flex;
@@ -115,7 +143,6 @@ body {
 
   .main-container {
     display: flex;
-    height: fit-content;
     padding: 2rem;
     border-radius: 2rem;
     align-items: center;
@@ -126,11 +153,33 @@ body {
     flex: 1;
   }
 
-  .main-container {
-    flex: 1;
-  }
-
   .signup-container {
     padding: 0rem 4rem;
+  }
+
+  .success-container {
+    max-width: 450px;
+    height: fit-content;
+  }
+
+  .success-container {
+    padding: 4rem;
+    margin: 50% 0;
+    height: auto;
+    border-radius: 2rem;
+  }
+
+  .success-header {
+    margin-top: 2rem;
+  }
+
+  .success-msg {
+    margin: 0;
+    margin-top: 2rem;
+    line-height: 1.5;
+  }
+
+  .dismiss-btn {
+    margin-top: 3rem;
   }
 }
